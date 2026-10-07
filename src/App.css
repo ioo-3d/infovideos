@@ -1,0 +1,145 @@
+/* PLATEWEB UIに合わせた配色 */
+:root {
+  --color-green: #22c55e;      /* 緑 */
+  --color-yellow: #fbbf24;     /* 黄 */
+  --color-black: #1f2937;      /* 黒 */
+  --color-white: #ffffff;      /* 白 */
+  --color-gray-light: #f3f4f6;
+  --color-gray-dark: #374151;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #fafafa;
+  color: var(--color-black);
+  line-height: 1.6;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0fdf4 0%, #fffbeb 100%);
+}
+
+.app-header {
+  background: linear-gradient(90deg, var(--color-green) 0%, var(--color-yellow) 100%);
+  color: var(--color-black);
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.2);
+}
+
+.app-header h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.app-header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.video-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  padding: 3rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.video-card {
+  background: var(--color-white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 3px solid transparent;
+}
+
+.video-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(34, 197, 94, 0.2);
+  border-color: var(--color-green);
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 アスペクト比 */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-info {
+  padding: 1.5rem;
+  background: var(--color-white);
+}
+
+.video-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-black);
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.video-channel {
+  font-size: 0.85rem;
+  color: var(--color-gray-dark);
+  font-weight: 500;
+}
+
+.app-footer {
+  background: var(--color-black);
+  color: var(--color-white);
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* レスポンシブ */
+@media (max-width: 768px) {
+  .app-header {
+    padding: 2rem 1rem;
+  }
+
+  .app-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .video-card {
+    border-radius: 8px;
+  }
+}

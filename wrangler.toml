@@ -1,0 +1,6 @@
+name = "infovideos"
+type = "javascript"
+main = ""
+
+[env.production]
+name = "infovideos"
