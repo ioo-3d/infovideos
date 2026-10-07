@@ -25,27 +25,40 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: linear-gradient(135deg, #f0fdf4 0%, #fffbeb 100%);
+  background: #f7f8f6;
 }
 
 .app-header {
-  background: linear-gradient(90deg, var(--color-green) 0%, var(--color-yellow) 100%);
+  background: linear-gradient(90deg, #eaf7ee 0%, #fdf6e3 100%);
   color: var(--color-black);
-  padding: 3rem 2rem;
+  padding: 1.2rem 2rem;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.2);
+  box-shadow: 0 2px 8px rgba(34, 197, 94, 0.10);
+  border-bottom: 2px solid rgba(34, 197, 94, 0.25);
+}
+
+.app-logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--color-white);
+  object-fit: contain;
+  padding: 4px;
+  margin-bottom: 0.4rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  border: 2px solid var(--color-black);
 }
 
 .app-header h1 {
-  font-size: 2.5rem;
-  font-weight: 900;
-  margin-bottom: 0.5rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 0.15rem;
+  color: #14532d;
 }
 
 .app-header p {
-  font-size: 1.1rem;
-  opacity: 0.9;
+  font-size: 0.95rem;
+  opacity: 0.75;
   font-weight: 500;
 }
 
@@ -126,11 +139,16 @@ body {
 /* レスポンシブ */
 @media (max-width: 768px) {
   .app-header {
-    padding: 2rem 1rem;
+    padding: 0.9rem 1rem;
   }
 
   .app-header h1 {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
+  }
+
+  .app-logo {
+    width: 52px;
+    height: 52px;
   }
 
   .video-grid {

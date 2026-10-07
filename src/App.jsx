@@ -15,6 +15,7 @@ function App() {
   return (
     <div className="app-container">
       <header className="app-header">
+        <img src="/logo.png" alt="ioo3D car camping logo" className="app-logo" />
         <h1>取付方法ガイド</h1>
         <p>パーツの取付方法をビデオで確認</p>
       </header>
